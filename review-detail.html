@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Details - Creative Dashboard</title>
+    <link rel="stylesheet" href="css/dashbord.css">
+</head>
+<body>
+    <!-- Hamburger Menu -->
+    <button class="hamburger-toggle" onclick="toggleMobileSidebar()" aria-label="Toggle navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+    </button>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-logo">
+                <div class="sidebar-logo-icon">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"></path>
+                        <polyline points="10 17 14 13 10 9"></polyline>
+                    </svg>
+                </div>
+                <div class="sidebar-logo-text">
+                    <h3>Creative Hub</h3>
+                    <p>Dashboard</p>
+                </div>
+            </div>
+
+            <nav class="nav-section">
+                <div class="nav-section-title">Main</div>
+                <ul class="nav-menu">
+                    <li><a class="nav-link" href="index.html">Dashboard Home</a></li>
+                    <li><a class="nav-link" href="index.html">Profile & Company</a></li>
+                    <li><a class="nav-link" href="index.html">Projects</a></li>
+                    <li><a class="nav-link active" href="orders.html">Orders & Reviews</a></li>
+                </ul>
+            </nav>
+
+            <nav class="nav-section">
+                <div class="nav-section-title">Settings</div>
+                <ul class="nav-menu">
+                    <li><a class="nav-link" href="index.html">Customization</a></li>
+                    <li><a class="nav-link" href="index.html">Account</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <div class="content-header">
+                <div>
+                    <h1>Review Details</h1>
+                    <p style="color: var(--text-light); margin-top: 0.5rem;">Review for "Brand Identity" Project</p>
+                </div>
+                <div class="header-actions">
+                    <a href="orders.html" class="btn btn-secondary btn-small">Back to Orders</a>
+                </div>
+            </div>
+
+            <!-- Review Detail Card -->
+            <div class="card" style="max-width: 800px;">
+                <div class="review-header" style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-color);">
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <div style="width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--primary-gold), #ff8c00); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.5rem;">SJ</div>
+                            <div>
+                                <h3 style="margin: 0; font-size: 1.1rem;">Sarah Johnson</h3>
+                                <p style="margin: 0; color: var(--text-light); font-size: 0.9rem;">Verified Customer</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem; align-items: center;">
+                            <div style="display: flex; color: var(--primary-gold);">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                </svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                </svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                </svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                </svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                </svg>
+                            </div>
+                            <span style="font-weight: 600; margin-left: 0.5rem;">5.0</span>
+                        </div>
+                    </div>
+                    <div style="text-align: right;">
+                        <span class="status-badge status-approved">Approved</span>
+                        <p style="margin-top: 0.5rem; color: var(--text-light); font-size: 0.85rem;">Dec 16, 2024</p>
+                    </div>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 0.5rem;">Project</h4>
+                    <p>Brand Identity - Logo Design & Branding Package</p>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 0.75rem;">Review Title</h4>
+                    <h3 style="margin: 0 0 1rem 0; font-size: 1.2rem;">Exceptional work! Highly recommend!</h3>
+                </div>
+
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 0.75rem;">Review Text</h4>
+                    <p style="line-height: 1.8; color: var(--text-light);">
+                        Sarah did an absolutely fantastic job with our brand identity project. From the initial consultation to the final deliverables, the entire process was smooth and professional. The design concepts were creative and perfectly aligned with our vision. I was particularly impressed by the attention to detail and the multiple revision rounds without any additional charges. The logo design is now our pride, and we've received multiple compliments from our clients and partners. Highly recommend Creative Studios for any branding or design work!
+                    </p>
+                </div>
+
+                <div class="grid-2" style="margin-bottom: 2rem;">
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem;">Service Provided</h4>
+                        <p>Branding - Full Package</p>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 0.5rem;">Order ID</h4>
+                        <p>#ORD-2024-1847</p>
+                    </div>
+                </div>
+
+                <div style="padding-top: 1.5rem; border-top: 1px solid var(--border-color); display: flex; gap: 1rem;">
+                    <button class="btn btn-primary btn-small">Publish Review</button>
+                    <button class="btn btn-secondary btn-small">Archive</button>
+                    <button class="btn btn-danger btn-small">Delete</button>
+                </div>
+            </div>
+
+            <!-- Customer Response Section -->
+            <div class="card" style="max-width: 800px; margin-top: 2rem;">
+                <h3>Your Response</h3>
+                <form>
+                    <div class="form-group">
+                        <label>Reply to Review</label>
+                        <textarea placeholder="Thank the customer and respond to their feedback..."></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary">Send Reply</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

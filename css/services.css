@@ -1,0 +1,147 @@
+.page-header {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, rgba(0, 2, 35, 0.9) 100%);
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.max-width {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.services-container {
+  padding: 4rem 1rem;
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 4rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.service-item.reverse {
+  grid-template-columns: 1fr 1fr;
+  direction: rtl;
+}
+
+.service-item.reverse > * {
+  direction: ltr;
+}
+
+.service-image {
+  text-align: center;
+}
+
+.service-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 2, 35, 0.15);
+}
+
+.service-details h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+}
+
+.service-details p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.service-details ul {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.service-details li {
+  padding: 0.5rem 0 0.5rem 2rem;
+  position: relative;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.service-details li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-gold);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.cta-section {
+  background: linear-gradient(135deg, var(--primary-gold) 0%, var(--primary-olive) 100%);
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.cta-section p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .page-header p {
+    font-size: 1rem;
+  }
+
+  .service-item {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+
+  .service-item.reverse {
+    direction: ltr;
+  }
+
+  .service-details h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .services-container {
+    padding: 2rem 1rem;
+  }
+
+  .service-item {
+    margin-bottom: 2rem;
+  }
+}

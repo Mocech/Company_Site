@@ -1,0 +1,667 @@
+/* ===== CONTACT PAGE PROFESSIONAL STYLING ===== */
+
+:root {
+  --primary-dark: #000223;
+  --primary-gold: #ffa000;
+  --primary-olive: #7c521b;
+  --light-bg: #fffafe;
+  --text-dark: #1a1a1a;
+  --text-light: #666666;
+  --border-color: #e0e0e0;
+  --accent-light: #f5f5f5;
+
+  /* Social Media Colors */
+  --whatsapp: #25d366;
+  --whatsapp-dark: #128c7e;
+  --instagram: #e1306c;
+  --instagram-light: #feda75;
+  --tiktok: #000000;
+  --facebook: #1877f2;
+  --youtube: #ff0000;
+}
+
+/* ===== CONTACT HERO SECTION ===== */
+.contact-hero {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, rgba(0, 2, 35, 0.95) 100%);
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 160, 0, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+
+.contact-hero h1 {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+  letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== DIRECT CONTACT SECTION ===== */
+.contact-section {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, white 0%, var(--accent-light) 100%);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact-card {
+  background: white;
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 2, 35, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid transparent;
+  position: relative;
+}
+
+.contact-card:hover {
+  box-shadow: 0 16px 40px rgba(0, 2, 35, 0.12);
+  transform: translateY(-6px);
+  border-color: var(--primary-gold);
+}
+
+/* ===== WHATSAPP CARD STYLING ===== */
+.whatsapp-card {
+  border: 2px solid rgba(37, 211, 102, 0.1);
+}
+
+.whatsapp-card:hover {
+  border-color: var(--whatsapp);
+  background: rgba(37, 211, 102, 0.02);
+}
+
+.whatsapp-badge {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--whatsapp) 0%, var(--whatsapp-dark) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-badge i {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.whatsapp-card:hover .whatsapp-badge {
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.4);
+}
+
+.btn-whatsapp {
+  background: linear-gradient(135deg, var(--whatsapp) 0%, var(--whatsapp-dark) 100%);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background: linear-gradient(135deg, var(--whatsapp-dark) 0%, var(--whatsapp) 100%);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+  transform: scale(1.02);
+}
+
+.btn-whatsapp i {
+  font-size: 1.2rem;
+}
+
+/* ===== CALL CARD ===== */
+.call-icon {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--primary-gold) 0%, rgba(255, 160, 0, 0.8) 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 8px 24px rgba(255, 160, 0, 0.3);
+  transition: all 0.3s ease;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.contact-card:hover .call-icon {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 12px 32px rgba(255, 160, 0, 0.4);
+}
+
+.contact-card h3 {
+  margin: 1.5rem 0 0.75rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.contact-subtext {
+  color: var(--primary-olive);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  letter-spacing: 0.3px;
+}
+
+.contact-hint {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-top: 1.5rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* ===== SECONDARY CONTACT OPTIONS ===== */
+.secondary-contact {
+  background: linear-gradient(135deg, var(--accent-light) 0%, rgba(255, 160, 0, 0.05) 100%);
+  padding: 5rem 0;
+  margin: 3rem 0;
+}
+
+.secondary-contact h2 {
+  text-align: center;
+  margin-bottom: 3.5rem;
+  font-size: 2.2rem;
+}
+
+.secondary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.secondary-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 2, 35, 0.04);
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.secondary-card:hover {
+  box-shadow: 0 12px 32px rgba(0, 2, 35, 0.1);
+  transform: translateY(-4px);
+  border-color: var(--primary-gold);
+}
+
+.secondary-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.secondary-card:hover .secondary-icon {
+  transform: scale(1.15);
+}
+
+.secondary-card h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+  color: var(--text-dark);
+}
+
+.secondary-card p {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.location-address,
+.business-hours {
+  color: var(--primary-gold);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-top: 1rem;
+  letter-spacing: 0.3px;
+}
+
+.contact-link {
+  color: var(--primary-gold);
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.contact-link:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+  transform: translateX(3px);
+}
+
+/* ===== CONTACT FORM SECTION ===== */
+.contact-form-section {
+  padding: 5rem 0;
+  background: white;
+}
+
+.contact-form-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+}
+
+.form-subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3.5rem;
+  font-size: 1.05rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.form-wrapper {
+  max-width: 650px;
+  margin: 0 auto;
+  background: white;
+  padding: 3.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 2, 35, 0.08);
+  border: 1px solid var(--border-color);
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  resize: vertical;
+  background: white;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #999;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-gold);
+  box-shadow: 0 6px 16px rgba(255, 160, 0, 0.2);
+  background: rgba(255, 160, 0, 0.01);
+}
+
+.contact-form textarea {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.form-message {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  display: none;
+  animation: slideIn 0.3s ease;
+}
+
+.form-message.show {
+  display: block;
+}
+
+.form-message.success {
+  background-color: rgba(37, 211, 102, 0.1);
+  color: #25d366;
+  border: 2px solid rgba(37, 211, 102, 0.3);
+}
+
+.form-message.error {
+  background-color: rgba(255, 0, 0, 0.1);
+  color: #e74c3c;
+  border: 2px solid rgba(255, 0, 0, 0.3);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== SOCIAL MEDIA SECTION ===== */
+.social-section {
+  background: linear-gradient(135deg, white 0%, var(--accent-light) 100%);
+  padding: 5rem 0;
+  margin: 3rem 0;
+}
+
+.social-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+}
+
+.social-subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3.5rem;
+  font-size: 1.05rem;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+.social-card {
+  display: block;
+  padding: 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid var(--border-color);
+  background: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.social-card.instagram::before {
+  background: linear-gradient(135deg, #feda75 0%, #fa7e1e 25%, #d92e7f 50%, #9b36b7 75%, #515bd4 100%);
+}
+
+.social-card.tiktok::before {
+  background: linear-gradient(135deg, #25f4ee 0%, #000 100%);
+}
+
+.social-card.facebook::before {
+  background: linear-gradient(135deg, #0a66c2 0%, #1877f2 100%);
+}
+
+.social-card.youtube::before {
+  background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+}
+
+.social-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 2, 35, 0.15);
+  border-color: transparent;
+}
+
+.social-card:hover::before {
+  left: 0;
+}
+
+.social-card:hover .social-icon-circle {
+  color: white;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+}
+
+.social-icon-circle {
+  width: 90px;
+  height: 90px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 2, 35, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.social-card.instagram .social-icon-circle {
+  color: var(--instagram);
+}
+
+.social-card.instagram:hover .social-icon-circle {
+  background: linear-gradient(135deg, #feda75 0%, #fa7e1e 25%, #d92e7f 50%, #9b36b7 75%, #515bd4 100%);
+}
+
+.social-card.tiktok .social-icon-circle {
+  color: var(--tiktok);
+}
+
+.social-card.tiktok:hover .social-icon-circle {
+  background: linear-gradient(135deg, #25f4ee 0%, #000 100%);
+}
+
+.social-card.facebook .social-icon-circle {
+  color: var(--facebook);
+}
+
+.social-card.facebook:hover .social-icon-circle {
+  background: linear-gradient(135deg, #0a66c2 0%, #1877f2 100%);
+}
+
+.social-card.youtube .social-icon-circle {
+  color: var(--youtube);
+}
+
+.social-card.youtube:hover .social-icon-circle {
+  background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+}
+
+.instagram-bg {
+  color: var(--instagram);
+}
+.tiktok-bg {
+  color: var(--tiktok);
+}
+.facebook-bg {
+  color: var(--facebook);
+}
+.youtube-bg {
+  color: var(--youtube);
+}
+
+.social-card h4 {
+  margin: 1rem 0 0.75rem 0;
+  color: var(--text-dark);
+  font-size: 1.3rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.social-card:hover h4 {
+  color: white;
+}
+
+.social-card p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.social-card:hover p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.social-cta {
+  display: inline-block;
+  color: var(--primary-gold);
+  font-weight: 700;
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 1;
+  font-size: 0.95rem;
+}
+
+.social-card:hover .social-cta {
+  color: white;
+  transform: translateX(4px);
+}
+
+.social-cta i {
+  margin-left: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-card:hover .social-cta i {
+  transform: translateX(3px);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 4rem 1.5rem;
+  }
+
+  .contact-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .contact-grid,
+  .secondary-grid,
+  .social-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-card,
+  .secondary-card,
+  .social-card {
+    padding: 2rem;
+  }
+
+  .form-wrapper {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .contact-section,
+  .secondary-contact,
+  .contact-form-section,
+  .social-section {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero {
+    padding: 3rem 1rem;
+  }
+
+  .contact-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .contact-card,
+  .secondary-card,
+  .social-card {
+    padding: 1.5rem;
+  }
+
+  .contact-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .whatsapp-badge,
+  .call-icon,
+  .social-icon-circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .whatsapp-badge i,
+  .call-icon,
+  .social-icon-circle {
+    font-size: 2rem;
+  }
+
+  .form-wrapper {
+    padding: 2rem 1rem;
+  }
+
+  .contact-form-section h2,
+  .social-section h2,
+  .secondary-contact h2 {
+    font-size: 1.5rem;
+  }
+}

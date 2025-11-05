@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Project - Summer Campaign 2024</title>
+    <link rel="stylesheet" href="css/dashbord.css">
+    <style>
+        .project-view-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .project-breadcrumb a {
+            color: var(--primary-gold);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .project-breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .project-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .project-gallery-main {
+            border-radius: 12px;
+            overflow: hidden;
+            background: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .gallery-main-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            background: linear-gradient(135deg, rgba(255, 160, 0, 0.08), rgba(124, 82, 27, 0.08));
+        }
+
+        .gallery-thumbnails {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 0.5rem;
+            padding: 0.5rem;
+            background: var(--hover-light);
+        }
+
+        .gallery-thumbnail {
+            width: 80px;
+            height: 80px;
+            border-radius: 6px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: var(--transition);
+        }
+
+        .gallery-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-thumbnail:hover {
+            border-color: var(--primary-gold);
+            transform: scale(1.05);
+        }
+
+        .gallery-thumbnail.active {
+            border-color: var(--primary-gold);
+            box-shadow: 0 0 0 2px var(--light-bg), 0 0 0 4px var(--primary-gold);
+        }
+
+        .project-meta {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .project-title {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-dark);
+        }
+
+        .project-meta-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .project-meta-row:last-child {
+            border-bottom: none;
+        }
+
+        .meta-label {
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+
+        .meta-value {
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .project-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .videos-section {
+            margin-top: 2rem;
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+        }
+
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: linear-gradient(135deg, rgba(255, 160, 0, 0.08), rgba(124, 82, 27, 0.08));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-play-btn {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .video-play-btn:hover {
+            background: #e68900;
+            transform: scale(1.1);
+        }
+
+        .video-info {
+            padding: 1rem;
+        }
+
+        .video-title {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .video-duration {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        .project-description {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            margin-top: 2rem;
+        }
+
+        .project-description h3 {
+            margin-top: 0;
+        }
+
+        .description-text {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .project-header {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-main-image {
+                height: 300px;
+            }
+
+            .project-title {
+                font-size: 1.4rem;
+            }
+
+            .project-meta-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .videos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <main class="main-content project-view-container">
+            <div class="project-breadcrumb">
+                <a onclick="goBack()">Projects</a>
+                <span>/</span>
+                <span>Summer Campaign 2024</span>
+            </div>
+
+            <!-- Project Header with Gallery and Meta -->
+            <div class="project-header">
+                <div class="project-gallery-main">
+                    <img src="/placeholder.svg?height=500&width=700" alt="Project main image" class="gallery-main-image" id="mainImage">
+                    <div class="gallery-thumbnails">
+                        <div class="gallery-thumbnail active" onclick="changeImage(this)">
+                            <img src="/placeholder.svg?height=80&width=80" alt="Thumbnail">
+                        </div>
+                        <div class="gallery-thumbnail" onclick="changeImage(this)">
+                            <img src="/placeholder.svg?height=80&width=80" alt="Thumbnail">
+                        </div>
+                        <div class="gallery-thumbnail" onclick="changeImage(this)">
+                            <img src="/placeholder.svg?height=80&width=80" alt="Thumbnail">
+                        </div>
+                        <div class="gallery-thumbnail" onclick="changeImage(this)">
+                            <img src="/placeholder.svg?height=80&width=80" alt="Thumbnail">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-meta">
+                    <h1 class="project-title">Summer Campaign 2024</h1>
+
+                    <div class="project-meta-row">
+                        <span class="meta-label">Category</span>
+                        <span class="meta-value">Videography</span>
+                    </div>
+
+                    <div class="project-meta-row">
+                        <span class="meta-label">Client</span>
+                        <span class="meta-value">TechCorp Inc</span>
+                    </div>
+
+                    <div class="project-meta-row">
+                        <span class="meta-label">Completed</span>
+                        <span class="meta-value">December 15, 2024</span>
+                    </div>
+
+                    <div class="project-meta-row">
+                        <span class="meta-label">Status</span>
+                        <span class="meta-value"><span class="status-badge status-approved">Published</span></span>
+                    </div>
+
+                    <div class="project-meta-row">
+                        <span class="meta-label">Project URL</span>
+                        <span class="meta-value" style="font-size: 0.85rem; word-break: break-all;">creativestudios.com/projects/summer-campaign</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <button class="btn btn-primary btn-small" onclick="editProject()">Edit Project</button>
+                        <button class="btn btn-secondary btn-small" onclick="if(confirm('Delete this project?')) alert('Project deleted')">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Description -->
+            <div class="project-description">
+                <h3>Project Description</h3>
+                <p class="description-text">
+                    This summer campaign showcases our latest videography work for TechCorp Inc. The campaign includes a series of promotional videos highlighting their new product line, from concept to final production. The team worked closely with their marketing department to create compelling visual narratives that resonate with their target audience.
+                </p>
+                <p class="description-text">
+                    Key deliverables include 5 promotional videos, social media content, and behind-the-scenes footage. The project utilized state-of-the-art production equipment and post-production techniques to ensure the highest quality output.
+                </p>
+            </div>
+
+            <!-- Videos Section -->
+            <div class="videos-section">
+                <h2 class="section-title">Project Videos</h2>
+                <div class="videos-grid">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <button class="video-play-btn" onclick="playVideo('video1')">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="video-info">
+                            <div class="video-title">Main Campaign Video</div>
+                            <div class="video-duration">4:32</div>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <button class="video-play-btn" onclick="playVideo('video2')">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="video-info">
+                            <div class="video-title">Product Showcase</div>
+                            <div class="video-duration">2:15</div>
+                        </div>
+                    </div>
+
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <button class="video-play-btn" onclick="playVideo('video3')">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="video-info">
+                            <div class="video-title">Behind the Scenes</div>
+                            <div class="video-duration">3:08</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Images Section -->
+            <div class="videos-section">
+                <h2 class="section-title">Additional Images</h2>
+                <div class="videos-grid">
+                    <img src="/placeholder.svg?height=250&width=350" alt="Project" style="border-radius: 12px; box-shadow: var(--shadow-md); width: 100%; object-fit: cover;">
+                    <img src="/placeholder.svg?height=250&width=350" alt="Project" style="border-radius: 12px; box-shadow: var(--shadow-md); width: 100%; object-fit: cover;">
+                    <img src="/placeholder.svg?height=250&width=350" alt="Project" style="border-radius: 12px; box-shadow: var(--shadow-md); width: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function changeImage(element) {
+            document.querySelectorAll('.gallery-thumbnail').forEach(el => el.classList.remove('active'));
+            element.classList.add('active');
+            const img = element.querySelector('img').src;
+            document.getElementById('mainImage').src = img;
+        }
+
+        function playVideo(videoId) {
+            alert('Video player: ' + videoId + ' would play here in a real application');
+        }
+
+        function editProject() {
+            window.location.href = 'edit-project.html';
+        }
+
+        function goBack() {
+            history.back();
+        }
+    </script>
+</body>
+</html>

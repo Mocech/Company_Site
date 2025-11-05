@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Order Details - Creative Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header Navigation -->
+        <header class="page-header">
+            <div class="header-content">
+                <a href="#" class="back-button">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span>Back to Orders</span>
+                </a>
+                <h1>WhatsApp Order Details</h1>
+            </div>
+            <div class="header-profile">
+                <div class="profile-avatar">A</div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="page-content">
+            <!-- Status Bar -->
+            <div class="status-bar">
+                <div class="status-item">
+                    <span class="status-label">Order Status</span>
+                    <span class="status-badge status-new">New</span>
+                </div>
+                <div class="status-divider"></div>
+                <div class="status-item">
+                    <span class="status-label">Last Contact</span>
+                    <span class="status-value">Today at 2:15 PM</span>
+                </div>
+                <div class="status-divider"></div>
+                <div class="status-item">
+                    <span class="status-label">Channel</span>
+                    <span class="channel-badge whatsapp">WhatsApp</span>
+                </div>
+            </div>
+
+            <!-- Customer Information Section -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2>Customer Information</h2>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <div class="section-content">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Customer Name</label>
+                            <p>John Doe</p>
+                        </div>
+                        <div class="info-item">
+                            <label>WhatsApp Number</label>
+                            <p>+254712345678</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Service Requested</label>
+                            <p><span class="service-badge">Videography</span></p>
+                        </div>
+                        <div class="info-item">
+                            <label>Order Date</label>
+                            <p>December 16, 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="info-full">
+                        <label>Order Description</label>
+                        <p class="description-text">Looking for a short promotional video for my business. Need it within 2 weeks.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quick Actions Section -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2>Quick Actions</h2>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="1"></circle>
+                        <circle cx="19" cy="12" r="1"></circle>
+                        <circle cx="5" cy="12" r="1"></circle>
+                    </svg>
+                </div>
+                <div class="actions-grid">
+                    <button class="action-card primary" onclick="openWhatsAppChat()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+                        </svg>
+                        <span>Open Chat</span>
+                    </button>
+                    <button class="action-card secondary" onclick="sendFollowupMessage()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                        <span>Send Message</span>
+                    </button>
+                    <button class="action-card secondary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                        </svg>
+                        <span>Send Quote</span>
+                    </button>
+                    <button class="action-card secondary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            <circle cx="9" cy="10" r="1"></circle>
+                            <circle cx="12" cy="10" r="1"></circle>
+                            <circle cx="15" cy="10" r="1"></circle>
+                        </svg>
+                        <span>More Info</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Order Management Section -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2>Order Management</h2>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                </div>
+                <div class="section-content">
+                    <div class="form-group">
+                        <label>Update Status</label>
+                        <select class="form-select" id="statusSelect">
+                            <option>New</option>
+                            <option>In Progress</option>
+                            <option>Pending Client Response</option>
+                            <option>Completed</option>
+                            <option>On Hold</option>
+                        </select>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="markOrderDone()">Mark as Completed</button>
+                        <button class="btn btn-secondary" onclick="window.location.href='#'">Back to Orders</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conversation History Section -->
+            <section class="content-section">
+                <div class="section-header">
+                    <h2>Conversation History</h2>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                </div>
+                <div class="conversation-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>Customer initiated contact</h4>
+                            <p class="timeline-date">December 16, 2024 at 1:45 PM</p>
+                            <p class="timeline-message">Looking for a short promotional video</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h4>You responded</h4>
+                            <p class="timeline-date">December 16, 2024 at 2:10 PM</p>
+                            <p class="timeline-message">Thanks for reaching out! I'd love to help with your project. Can you tell me more about your requirements?</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/interactions.js"></script>
+</body>
+</html>

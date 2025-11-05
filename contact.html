@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me - CreativeStudio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/project.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+<!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">@uxdam_</div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                 <li><a href="inquiry.html">Inquiry</a></li>
+            </ul>
+        </div>
+    </nav>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="contact-hero">
+      <div class="container">
+        <h1>Have a Question?</h1>
+        <p class="hero-subtitle">Whether it's about a custom design, collaboration, or follow-up on an order — I'm just a message away.</p>
+      </div>
+    </section>
+
+    <!-- Direct Contact Section -->
+    <section class="contact-section">
+      <div class="container">
+        <div class="contact-grid">
+          
+          <!-- WhatsApp Button -->
+          <div class="contact-card whatsapp-card">
+            <div class="whatsapp-badge">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <h3>Chat with Me on WhatsApp</h3>
+            <p class="contact-subtext">Fastest way to get a response.</p>
+            <a href="https://wa.me/+254707274060?text=Hello%2C%20I%20visited%20your%20website%20and%20would%20like%20to%20ask%20about%20your%20services." target="_blank" class="btn btn-whatsapp btn-block">
+              <i class="fab fa-whatsapp"></i> Start WhatsApp Chat
+            </a>
+            <p class="contact-hint">Available for quick inquiries and consultations</p>
+          </div>
+
+          <!-- Call Button -->
+          <div class="contact-card">
+            <div class="contact-icon call-icon">☎️</div>
+            <h3>Call Me Directly</h3>
+            <p class="contact-subtext">Mon – Sat, 8 AM – 6 PM</p>
+            <a href="tel:+254700000000" class="btn btn-primary btn-block">Call Now</a>
+            <p class="contact-hint">Available during business hours</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Secondary Contact Options -->
+    <section class="secondary-contact">
+      <div class="container">
+        <h2>Other Ways to Reach Me</h2>
+        
+        <div class="secondary-grid">
+          
+          <!-- Email -->
+          <div class="secondary-card">
+            <div class="secondary-icon">📧</div>
+            <h4>Email</h4>
+            <p>For formal inquiries or detailed project briefs</p>
+            <a href="mailto:info@creativestudio.com" class="contact-link">info@creativestudio.com</a>
+          </div>
+
+          <!-- Location -->
+          <div class="secondary-card">
+            <div class="secondary-icon">📍</div>
+            <h4>Location</h4>
+            <p>Based in Nairobi, serving clients across Kenya and beyond</p>
+            <p class="location-address">Nairobi, Kenya</p>
+          </div>
+
+          <!-- Availability -->
+          <div class="secondary-card">
+            <div class="secondary-icon">⏰</div>
+            <h4>Business Hours</h4>
+            <p>Monday to Saturday</p>
+            <p class="business-hours">8:00 AM – 6:00 PM EAT</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form-section">
+      <div class="container">
+        <h2>Send Me a Message</h2>
+        <p class="form-subtitle">I prefer WhatsApp for quick responses, but you can also reach me through this form.</p>
+        
+        <div class="form-wrapper">
+          <form class="contact-form" id="contactForm">
+            
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" required placeholder="Your name">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" required placeholder="Tell me about your project or inquiry..." rows="6"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
+            
+            <div class="form-message" id="formMessage"></div>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-section">
+      <div class="container">
+        <h2>Find My Work on Social Media</h2>
+        <p class="social-subtitle">Check out my recent projects and creative journey on these platforms</p>
+        
+        <div class="social-grid">
+          
+          <a href="https://instagram.com" target="_blank" class="social-card instagram">
+            <div class="social-icon-circle instagram-bg">
+              <i class="fab fa-instagram"></i>
+            </div>
+            <h4>Instagram</h4>
+            <p>Daily creative projects and behind-the-scenes</p>
+            <span class="social-cta">Follow <i class="fas fa-arrow-right"></i></span>
+          </a>
+
+          <a href="https://tiktok.com" target="_blank" class="social-card tiktok">
+            <div class="social-icon-circle tiktok-bg">
+              <i class="fab fa-tiktok"></i>
+            </div>
+            <h4>TikTok</h4>
+            <p>Quick creative tips and design tricks</p>
+            <span class="social-cta">Follow <i class="fas fa-arrow-right"></i></span>
+          </a>
+
+          <a href="https://facebook.com" target="_blank" class="social-card facebook">
+            <div class="social-icon-circle facebook-bg">
+              <i class="fab fa-facebook-f"></i>
+            </div>
+            <h4>Facebook</h4>
+            <p>Portfolio updates and community engagement</p>
+            <span class="social-cta">Follow <i class="fas fa-arrow-right"></i></span>
+          </a>
+
+          <a href="https://youtube.com" target="_blank" class="social-card youtube">
+            <div class="social-icon-circle youtube-bg">
+              <i class="fab fa-youtube"></i>
+            </div>
+            <h4>YouTube</h4>
+            <p>Full project showcases and tutorials</p>
+            <span class="social-cta">Subscribe <i class="fas fa-arrow-right"></i></span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section footer-brand">
+                <h4>@uxdam_</h4>
+                <p>Creative digital solutions crafted with precision and innovation</p>
+                <div class="footer-tagline">Transforming ideas into exceptional digital experiences</div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html#uiux">UI/UX Design</a></li>
+                    <li><a href="services.html#branding">Branding</a></li>
+                    <li><a href="services.html#webdesign">Web Design</a></li>
+                    <li><a href="services.html#videography">Videography</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="https://twitter.com/uxdam_" class="social-icon social-twitter" title="Twitter" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 10.5.5 12.5-5a20.5 20.5 0 01-1.5-5"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/uxdam_" class="social-icon social-instagram" title="Instagram" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z"></path>
+                            <circle cx="17.5" cy="6.5" r="1.5"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/company/uxdam" class="social-icon social-linkedin" title="LinkedIn" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/>
+                        </svg>
+                    </a>
+                    <a href="https://behance.net/uxdam" class="social-icon social-behance" title="Behance" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9.5 8c.828 0 1.5.672 1.5 1.5S10.328 11 9.5 11 8 10.328 8 9.5 8.672 8 9.5 8m0-1C8.672 7 8 7.672 8 8.5v3C8 12.328 8.672 13 9.5 13s1.5-.672 1.5-1.5v-3c0-.828-.672-1.5-1.5-1.5m5.5 1h3v1h-3v-1m-8 8c.828 0 1.5.672 1.5 1.5S7.328 19 6.5 19 5 18.328 5 17.5 5.672 16 6.5 16m8.5 0c-1.933 0-3.5 1.567-3.5 3.5S12.067 23 14 23s3.5-1.567 3.5-3.5-1.567-3.5-3.5-3.5m0 1c1.378 0 2.5 1.122 2.5 2.5s-1.122 2.5-2.5 2.5-2.5-1.122-2.5-2.5 1.122-2.5 2.5-2.5"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:hello@uxdam.com" class="social-icon social-email" title="Email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            <path d="M22 4l-10 8-10-8"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 @uxdam_ Creative Agency. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <span>•</span>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+  <script src="js/contact.js"></script>
+</body>
+</html>
