@@ -3,179 +3,309 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Brian | Creative Designer & Videographer</title>
-    <link rel="stylesheet" href="about.css">
+    <title>About - Creative Professional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Added Font Awesome for professional icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">@uxdam_</a>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="about.html" class="nav-link active">About</a>
-                <a href="reviews.html" class="nav-link">Reviews</a>
-                <a href="inquiry.html" class="nav-link inquiry-btn">Inquiry</a>
+            <div class="nav-logo">@uxdam_</div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="inquiry.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-content">
-            <h1 class="hero-title">Hi, I'm Brian</h1>
-            <p class="hero-subtitle">A passionate creative designer and videographer helping brands tell stories through visuals that inspire</p>
-            <p class="hero-tagline">Design. Capture. Create.</p>
-        </div>
-        <div class="hero-image">
-            <div class="placeholder-image">📷</div>
-        </div>
-    </section>
+    <main>
+        <!-- Header with date and intro -->
+        <section class="about-header">
+            <div class="about-header-container">
+                <div class="header-top">
+                    <p class="header-date">May 4th, 2025</p>
+                    <p class="header-profession">Designer | Videographer | Developer</p>
+                </div>
 
-    <!-- Personal Story Section -->
-    <section class="story-section">
-        <div class="story-container">
-            <div class="story-content">
-                <h2>My Creative Journey</h2>
-                <p>My creative journey started in 2018 when I began designing posters for local events. Over time, I expanded into videography, branding, and digital marketing — driven by one goal: to bring ideas to life through powerful visuals.</p>
-                <p>What started as a passion project has transformed into a full-fledged creative practice where I work with brands and individuals to craft compelling visual narratives. Every project is an opportunity to push creative boundaries and deliver work that truly resonates.</p>
-            </div>
-            <div class="story-stats">
-                <div class="stat-card">
-                    <h3>6+</h3>
-                    <p>Years of Experience</p>
-                </div>
-                <div class="stat-card">
-                    <h3>150+</h3>
-                    <p>Projects Completed</p>
-                </div>
-                <div class="stat-card">
-                    <h3>80+</h3>
-                    <p>Happy Clients</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- What I Do Section -->
-    <section class="services-overview">
-        <div class="services-container">
-            <h2>What I Do</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🎨</div>
-                    <h3>Graphic Design</h3>
-                    <p>Logos, posters, flyers, and social media content that capture attention and communicate your message clearly</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎥</div>
-                    <h3>Videography</h3>
-                    <p>Event coverage, short films, and professional editing that bring your brand's story to life</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">💻</div>
-                    <h3>Web Design</h3>
-                    <p>Modern, responsive websites for personal brands and businesses that leave lasting impressions</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📈</div>
-                    <h3>Digital Marketing</h3>
-                    <p>Strategic branding and digital marketing solutions to help your brand stand out online</p>
-                </div>
-            </div>
-            <a href="services.html" class="btn-primary">View My Work</a>
-        </div>
-    </section>
-
-    <!-- Mission Section -->
-    <section class="mission-section">
-        <div class="mission-container">
-            <h2>My Mission & Approach</h2>
-            <div class="mission-content">
-                <p class="mission-main">My mission is simple — to turn your ideas into visuals that communicate clearly, connect emotionally, and stand out creatively.</p>
-                <p>Every project I take on is handled with passion, precision, and a personal touch. I believe in understanding your vision deeply, collaborating closely, and delivering work that exceeds expectations.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials-section">
-        <div class="testimonials-container">
-            <h2>What My Clients Say</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p>"The poster design was top-notch and delivered fast! Brian truly understood our brand vision."</p>
-                    <p class="testimonial-author">— Mercy, Nairobi</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Professional, creative, and incredibly responsive. Brian elevated our brand presence significantly."</p>
-                    <p class="testimonial-author">— Alex, Brand Manager</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Working with Brian was a game-changer for our video content. His creativity and technical skills are unmatched."</p>
-                    <p class="testimonial-author">— Sarah, Content Director</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="cta-container">
-            <h2>Got a project in mind?</h2>
-            <p>Let's bring it to life together</p>
-            <div class="cta-buttons">
-                <a href="inquiry.html" class="btn-primary">Request a Service</a>
-                <a href="https://wa.me/254XXX" class="btn-secondary">Chat on WhatsApp</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer Info -->
-    <section class="footer-info">
-        <div class="footer-container">
-            <div class="footer-info-grid">
-                <div class="footer-item">
-                    <span class="footer-icon">📍</span>
-                    <div>
-                        <h4>Location</h4>
-                        <p>Based in Nairobi, Kenya</p>
+                <!-- Hero section with profile image left, name right -->
+                <div class="about-hero">
+                    <!-- Left: Story card with skills -->
+                    <div class="hero-left">
+                        <div class="story-card">
+                            <h2 class="card-title">About</h2>
+                            <p class="card-description">I'm a multidisciplinary creative passionate about helping brands and individuals tell their story through design, video, and web experiences. With 7+ years of experience, I specialize in creating compelling visuals and digital solutions.</p>
+                            
+                            <!-- Skill badges with professional icons instead of emojis -->
+                            <div class="skills-grid">
+                                <span class="skill-badge orange"><i class="fas fa-palette"></i> Brand Storytelling</span>
+                                <span class="skill-badge gold"><i class="fas fa-crosshairs"></i> Precision Crafted</span>
+                                <span class="skill-badge dark"><i class="fas fa-brain"></i> Strategic Design</span>
+                                <span class="skill-badge purple"><i class="fas fa-network-wired"></i> Team Oriented</span>
+                                <span class="skill-badge gray"><i class="fas fa-shield-alt"></i> Dependable Pro</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="footer-item">
-                    <span class="footer-icon">📧</span>
-                    <div>
-                        <h4>Email</h4>
-                        <p><a href="mailto:info@uxdam.com">info@uxdam.com</a></p>
+
+                    <!-- Center: Profile image -->
+                    <div class="hero-center">
+                        <!-- Enhanced profile circle with professional image styling -->
+                        <div class="profile-circle">
+                            <div class="profile-image-wrapper">
+                                <img src="des.jpg" alt="Professional Portrait">
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="footer-item">
-                    <span class="footer-icon">📞</span>
-                    <div>
-                        <h4>Phone</h4>
-                        <p><a href="tel:+254700000000">+254 700 000 000</a></p>
+
+                    <!-- Right: Name and years -->
+                    <div class="hero-right">
+                        <div class="name-section">
+                            <h1 class="name">Muhammad<br>Zidhal Falah</h1>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+                        </div>
+
+                        <div class="years-card">
+                            <div class="years-number">7+</div>
+                            <p>Years of Experience</p>
+                        </div>
+
+                        <div class="stats-card">
+                            <div class="stat-row">
+                                <span class="stat-icon"><i class="fas fa-laptop-code"></i></span>
+                                <div>
+                                    <div class="stat-number">150+</div>
+                                    <p>Projects</p>
+                                </div>
+                            </div>
+                            <div class="stat-row">
+                                <span class="stat-icon"><i class="fas fa-users"></i></span>
+                                <div>
+                                    <div class="stat-number">50+</div>
+                                    <p>Clients</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Journey and Experience Timeline -->
+        <section class="timeline-section">
+            <div class="timeline-container">
+                <!-- Journey Timeline -->
+                <div class="timeline-column">
+                    <h2 class="timeline-title">Journey</h2>
+                    <div class="timeline-items" id="journeyTimeline">
+                        <!-- Backend data structure: journey_items = [{year, title, description, icon}, ...] -->
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-content-wrapper">
+                                <div class="timeline-year">2018</div>
+                                <div class="timeline-content">
+                                    <h3><i class="fas fa-palette"></i> Began Design Career</h3>
+                                    <p>Started freelancing as a creative designer, building foundational skills in visual communication</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-content-wrapper">
+                                <div class="timeline-year">2021</div>
+                                <div class="timeline-content">
+                                    <h3><i class="fas fa-video"></i> Expanded to Video Production</h3>
+                                    <p>Integrated videography services into creative offering, expanding service portfolio</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-content-wrapper">
+                                <div class="timeline-year">2023</div>
+                                <div class="timeline-content">
+                                    <h3><i class="fas fa-code"></i> Added Web Development</h3>
+                                    <p>Expanded expertise to full-stack web solutions for comprehensive client support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Timeline -->
+                <div class="timeline-column">
+                    <h2 class="timeline-title">Experience</h2>
+                    <div class="timeline-items" id="experienceTimeline">
+                        <!-- Backend data structure: experience_items = [{year, title, description, icon}, ...] -->
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-content-wrapper">
+                                <div class="timeline-year">2022</div>
+                                <div class="timeline-content">
+                                    <h3><i class="fas fa-flask"></i> Research & Development</h3>
+                                    <p>Led design initiatives for brand partnerships and strategic projects</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-content-wrapper">
+                                <div class="timeline-year">2023</div>
+                                <div class="timeline-content">
+                                    <h3><i class="fas fa-ruler"></i> Layout & Creative Direction</h3>
+                                    <p>Directed visual projects for media production and brand campaigns</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker">
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-content-wrapper">
+                                <div class="timeline-year">Now</div>
+                                <div class="timeline-content">
+                                    <h3><i class="fas fa-star"></i> Independent Creative Studio</h3>
+                                    <p>Running creative services studio with focus on quality and client satisfaction</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Software Skills -->
+        <section class="software-section">
+            <div class="software-container">
+                <h2 class="software-title">Software Skills</h2>
+                <!-- Backend data structure: skills = [{name, image_url, description}, ...] -->
+                <div class="tools-showcase" id="skillsShowcase">
+                    <div class="tool-item-image" data-tooltip="Adobe Photoshop">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Download%20Photoshop%203d%20icon-gyieLHDtkclzebPGONRhU9vLLfxvVR.jpg" alt="Photoshop">
+                    </div>
+                    <div class="tool-item-image" data-tooltip="Adobe Illustrator">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Illustrator%203D%20Icon%20Tutorial%20%E2%80%93%20Make%20Stunning%20Icons%20Fast%21-gHUg3u4VBMRn3zRMLEwin7IQHxTxon.jpg" alt="Illustrator">
+                    </div>
+                    <div class="tool-item-image" data-tooltip="Figma">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Figma%203d%20Dark%20Mode%20Icon-eq41Dia0Q0vfLTyP1G5eraS5nLkduA.jpg" alt="Figma">
+                    </div>
+                    <div class="tool-item-image" data-tooltip="Canva">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Canva%20Logo-yIKs4NQvegmKMeVjhIYDv6hV25Uz4T.jpg" alt="Canva">
+                    </div>
+                    <div class="tool-item-image" data-tooltip="CorelDRAW">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Download%20CorelDRAW%20by%20Corel%20Corporation%20on%20the%20App%C2%A0Store_%20See%20screenshots%2C%20ratings%20and%20reviews%2C%20user%20tips%20and%20more%20games%20like%20CorelDRAW_-7f9dFpMKyZwV7IS07Nwoy44HrvHahC.jpg" alt="CorelDRAW">
+                    </div>
+                    <div class="tool-item-image" data-tooltip="WordPress">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Wordpress%20Blue%20Logo%20Sticker%20Pin%20by%20burakgulnar-OaJUbU4TQeborYsVLmBXEgPApl9DDp.jpg" alt="WordPress">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact / Info Section -->
+        <section class="contact-info-section">
+            <div class="contact-container">
+                <h2 class="contact-title">Get In Touch</h2>
+                
+                <!-- Redesigned contact section with professional layout and Django-ready form structure -->
+                <div class="contact-section-wrapper">
+                    <div class="contact-methods">
+                        <a href="mailto:zidhalfalah@example.com" class="contact-method-card">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-content">
+                                <p class="method-label">Email</p>
+                                <p class="method-value">zidhalfalah@example.com</p>
+                            </div>
+                        </a>
+
+                        <a href="https://wa.me/254xxxxxxxxx" target="_blank" class="contact-method-card">
+                            <div class="method-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="method-content">
+                                <p class="method-label">WhatsApp</p>
+                                <p class="method-value">+254 XXX XXX XXX</p>
+                            </div>
+                        </a>
+
+                        <a href="https://instagram.com/zidhalfalah_" target="_blank" class="contact-method-card">
+                            <div class="method-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="method-content">
+                                <p class="method-label">Instagram</p>
+                                <p class="method-value">@zidhalfalah_</p>
+                            </div>
+                        </a>
+
+                        <a href="https://linkedin.com/in/zidhalfalah" target="_blank" class="contact-method-card">
+                            <div class="method-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="method-content">
+                                <p class="method-label">LinkedIn</p>
+                                <p class="method-value">Muhammad Zidhal</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Primary CTA to inquiry form -->
+                    <div class="inquiry-cta">
+                        <a href="inquiry.html" class="inquiry-btn-primary">
+                            <span class="btn-text">Start an Inquiry</span>
+                            <i class="fas fa-arrow-right btn-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="main-footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Brian. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#" class="social-link">Twitter</a>
-                <a href="#" class="social-link">Instagram</a>
-                <a href="#" class="social-link">LinkedIn</a>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <p class="footer-tagline">© 2025 @uxdam_ — Crafted with passion in Nairobi, Kenya</p>
+                <div class="footer-socials">
+                    <a href="https://twitter.com/zidhalfalah_" class="footer-social" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com/zidhalfalah_" class="footer-social" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/zidhalfalah" class="footer-social" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://behance.net/zidhalfalah" class="footer-social" title="Behance">
+                        <i class="fab fa-behance"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script src="about.js"></script>
+    <script src="js/about.js"></script>
 </body>
 </html>
